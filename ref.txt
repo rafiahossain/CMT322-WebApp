@@ -1,0 +1,55 @@
+<!--orders start-->
+<div class="search">
+    <h2>Current Orders</h2>
+    <!--retrieve ul items from database later-->
+    <ul id="orderUL">
+      <li><a href="#">Chocolate chips cookies</a></li>
+      <li><a href="#">Popia Udang</a></li>
+
+      <li><a href="#">Double Chocolate Haven</a></li>
+      <li><a href="#">Absolute Vampire</a></li>
+
+      <li><a href="#">Choco Berry</a></li>
+      <li><a href="#">Red velvet</a></li>
+      <li><a href="#">Tart Royale Montok</a></li>
+    </ul>
+  
+  </div>
+  <!--orders end-->
+  
+    
+  <script>
+    var arr = [
+        "Order 1",
+        "Order 2",
+        "Order 3",
+        "Order 4",
+        "Order 5"
+    ]; 
+
+    var ul, li;
+    ul = document.getElementById("orderUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+       a = li[i].getElementsByTagName("a")[0];
+       txtValue = a.textContent || a.innerText;
+
+       
+       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+       } 
+        
+       else {
+        li[i].style.display = "none";
+       }
+        
+      }
+
+  </script>
+
+
+  customers.push(["Order ID", "Customer ID", "Date"]);
+        customers.push([38289, "The Bakery Box", "01/02/23"]);
+        customers.push([87992, "Frosted Bakery", "01/02/23"]);
+        customers.push([36878, "Cocoa Corner", "01/02/23"]);
+        customers.push([46787, "Cake District", "01/02/23"]);

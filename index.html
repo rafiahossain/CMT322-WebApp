@@ -1,0 +1,87 @@
+<!doctype html> 
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a590290704.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title> Bilicious Ordering System</title>
+  </head>
+
+  <!--header start-->
+  <div id="header">
+    <img src="logo.png" alt="Bilicious logo" style="width:150px; height:75px; ">
+    <div class="nav">
+      
+      <ul class="nav_link">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Payment</a></li>
+        <li><a href="#">Order</a></li>
+        <li><a href="#">FAQ</a></li>
+        
+      </ul>
+    </div>
+
+    <!--right navigation-->
+    <div id="login">
+      <button><i class="fa-regular fa-user" style="font-size: 15px;"></i>  Login</button>
+    </div>
+    <button><i class="fa fa-shopping-cart" style="font-size:18px"></i></button>
+  </div>
+  <!--header end-->
+  
+  <!--slider banner start-->
+  
+  <!--slider banner end-->
+
+
+
+  <!--search bar start-->
+  <div class="search">
+    <h2>My Phonebook</h2>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+    <ul id="myUL">
+      <li><a href="#">Adele</a></li>
+      <li><a href="#">Agnes</a></li>
+
+      <li><a href="#">Billy</a></li>
+      <li><a href="#">Bob</a></li>
+
+      <li><a href="#">Calvin</a></li>
+      <li><a href="#">Christina</a></li>
+      <li><a href="#">Cindy</a></li>
+    </ul>
+  
+  </div>
+  <!--search bar end-->
+  
+    
+  <script>
+    function myFunction() 
+    {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } 
+        
+        else {
+          li[i].style.display = "none";
+        }
+        
+      }
+    }
+  </script>
+  
+
+  
+  
+</html>
